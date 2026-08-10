@@ -1,0 +1,141 @@
+.hero {
+  position: relative;
+  background-image: url("../assets/dorfflic-hero.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-background-one,
+.hero-background-two {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-background-one,
+.hero-background-two {
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-background-one {
+  opacity: 1;
+}
+
+.hero-background-two {
+  opacity: 0;
+}
+
+.hero-background-one.active,
+.hero-background-two.active {
+  opacity: 1;
+}
+
+.hero-background-one:not(.active),
+.hero-background-two:not(.active) {
+  opacity: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  animation: slideFromLeft 1s ease-out;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-content p,
+.hero-buttons {
+  animation: slideFromRight 1s ease-out;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-content p {
+  animation-delay: 0.15s;
+}
+
+.hero-buttons {
+  animation-delay: 0.3s;
+}
+
+
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.btn-secondary {
+  padding: 12px 24px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  color: var(--accent);
+  background: white;
+  border-color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: white;
+}
