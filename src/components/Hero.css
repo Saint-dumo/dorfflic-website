@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  background-image: url("../assets/dorfflic-hero.png");
+  background-image: url("..dorfflic-hero.png");
   background-size: cover;
   background-position: center;
   min-height: 80vh;
@@ -61,6 +61,19 @@
   position: relative;
   z-index: 2;
   text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  margin: 0;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 20px 2px;
+  color: white;
 }
 
 .hero-content h1 {
@@ -139,4 +152,42 @@
 .btn-secondary:hover {
   background: #0b1f33;
   color: white;
+}
+
+@media (max-width: 1024px) {
+
+  .hero {
+    min-height: 75vh;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 18px 0;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 80%;
+    max-width: 280px;
+    text-align: center;
+    box-sizing: border-box;
+  }
 }

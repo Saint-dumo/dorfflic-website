@@ -1,0 +1,295 @@
+.tracking {
+  padding: 120px 8%;
+  background: #0b1f33;
+  color: #ffffff;
+}
+
+.tracking-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tracking-content > span {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.tracking-content h2 {
+  margin: 0 0 20px;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.tracking-content p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tracking-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.tracking-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 18px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+}
+
+.tracking-form input::placeholder {
+  color: #999;
+}
+
+.tracking-form button {
+  padding: 0 28px;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tracking-form button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.tracking-error {
+  max-width: 700px;
+  margin: 20px auto 0;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 100, 100, 0.35);
+  border-radius: 8px;
+  background: rgba(255, 80, 80, 0.08);
+  color: #ffb3b3;
+  font-size: 0.9rem;
+  text-align: left;
+  animation: trackingErrorIn 0.3s ease;
+}
+
+@keyframes trackingErrorIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tracking-result {
+  max-width: 700px;
+  margin: 40px auto 0;
+  padding: 35px;
+  text-align: left;
+  background: #ffffff;
+  color: #222;
+  border-radius: 10px;
+  animation: trackingResultIn 0.4s ease;
+}
+
+.tracking-result > span,
+.rider-details > span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.tracking-result h3 {
+  margin: 0 0 15px;
+  font-size: 1.6rem;
+}
+
+.tracking-status {
+  display: inline-block;
+  margin: 0 0 20px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #21804a;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tracking-result > p:not(.tracking-status) {
+  margin: 8px 0;
+  color: #666;
+}
+
+.rider-details {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.rider-details h4 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.rider-details p {
+  margin: 0;
+  color: #666;
+}
+
+@keyframes trackingResultIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tracking-timeline {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 35px;
+  padding: 30px 0;
+}
+
+.timeline-step {
+  flex: 1;
+  text-align: center;
+}
+
+.timeline-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 10px;
+  border: 2px solid #d9dee3;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.timeline-step p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.timeline-step.completed .timeline-dot,
+.timeline-step.active .timeline-dot {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.timeline-step.completed p,
+.timeline-step.active p {
+  color: #333;
+  font-weight: 600;
+}
+
+.timeline-line {
+  flex: 0.4;
+  height: 2px;
+  margin-top: 13px;
+  background: #d9dee3;
+}
+
+.completed-line,
+.active-line {
+  background: var(--accent);
+}
+
+/* =========================
+   RESPONSIVE TRACKING
+========================= */
+
+@media (max-width: 700px) {
+  .tracking {
+    padding: 80px 20px;
+  }
+
+  .tracking-content h2 {
+    font-size: 2.3rem;
+  }
+
+  .tracking-form {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .tracking-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  .tracking-form button {
+    min-height: 48px;
+    width: 100%;
+  }
+
+  .tracking-result {
+    padding: 25px 20px;
+  }
+
+  .tracking-timeline {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 0;
+  }
+
+  .timeline-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .timeline-step p {
+    margin: 0;
+  }
+
+  .timeline-line {
+    flex: none;
+    width: 2px;
+    height: 25px;
+    margin: 0 0 0 13px;
+  }
+
+  .tracking-error {
+    text-align: center;
+  }
+}

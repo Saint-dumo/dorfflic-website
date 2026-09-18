@@ -1,20 +1,58 @@
-import "./Navbar.css"
+import { useState } from "react";
+import "./Navbar.css";
+import logo from "..dccnl-logo.png";
 
-import logo from "../assets/dccnl-logo.png"
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
-    <a href="#" className="logo">
+
+      <a href="#home" className="logo">
         <img src={logo} alt="Dorfflic Logistics Logo" />
-    </a>
-    
-    <ul className="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#track">Track Delivery</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>       
+      </a>
+
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation menu"
+        aria-expanded={menuOpen}
+      >
+        ☰
+      </button>
+
+    <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+      <li>
+        <a href="#home" onClick={() => setMenuOpen(false)}>
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="#about" onClick={() => setMenuOpen(false)}>
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="#services" onClick={() => setMenuOpen(false)}>
+          Services
+        </a>
+      </li>
+
+      <li>
+        <a href="#track" onClick={() => setMenuOpen(false)}>
+          Track Delivery
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact" onClick={() => setMenuOpen(false)}>
+          Contact
+        </a>
+      </li>
+    </ul>
+
     </nav>
   );
 }

@@ -1,4 +1,4 @@
-import marineImage from "../assets/dorfflic-marinehero.png";
+import marineImage from "..dorfflic-barge.png";
 import "./About.css";
 
 function About() {
@@ -32,30 +32,32 @@ function About() {
           <button>Learn More About Us</button>
         </div>
 
-        <div className="about-visual">
-          <div className="about-image">
-            <div className="about-image"><img src={marineImage} alt="Dorrflic marine logistics" /></div>
-          </div>
+       <div className="about-visual">
+            <div className="about-image">
+                <img
+                src={marineImage}
+                alt="Dorfflic marine logistics"
+                />
+            </div>
 
-          <div className="about-stats">
             <div className="about-stats">
                 <div className="about-stat">
-                    <strong>6,000+</strong>
-                    <span>Deliveries</span>
+                <strong>6,000+</strong>
+                <span>Deliveries</span>
                 </div>
 
                 <div className="about-stat">
-                    <strong>500+</strong>
-                    <span>Clients</span>
+                <strong>500+</strong>
+                <span>Clients</span>
                 </div>
 
                 <div className="about-stat">
-                    <strong>2025</strong>
-                    <span>Established</span>
+                <strong>2025</strong>
+                <span>Established</span>
                 </div>
             </div>
-          </div>
         </div>
+        
 
       </div>
 

@@ -1,0 +1,180 @@
+.contact {
+  padding: 120px 8%;
+  background: #ffffff;
+}
+
+.contact-heading {
+  max-width: 700px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.contact-heading > span {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.contact-heading h2 {
+  margin: 0 0 20px;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.05;
+  color: #222;
+}
+
+.contact-heading p {
+  margin: 0;
+  line-height: 1.7;
+  color: #666;
+}
+
+.contact-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+}
+
+.contact-item > span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.contact-item a,
+.contact-item p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.contact-item a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: var(--accent);
+}
+
+.contact-map {
+  min-height: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2f5;
+  color: #777;
+}
+
+.contact-phones {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-phones a + a {
+  padding-left: 20px;
+  border-left: 1px solid #d9dee3;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: 0;
+  display: block;
+}
+
+/* =========================
+   RESPONSIVE CONTACT
+========================= */
+
+@media (max-width: 1024px) {
+  .contact {
+    padding: 90px 5%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-details {
+    gap: 30px;
+  }
+
+  .contact-map {
+    min-height: 400px;
+  }
+
+  .contact-map iframe {
+    min-height: 400px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 70px 20px;
+  }
+
+  .contact-heading {
+    margin-bottom: 50px;
+  }
+
+  .contact-heading h2 {
+    font-size: 2.3rem;
+  }
+
+  .contact-grid {
+    gap: 40px;
+  }
+
+  .contact-details {
+    gap: 28px;
+  }
+
+  .contact-phones {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .contact-phones a + a {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .contact-map {
+    min-height: 350px;
+    border-radius: 14px;
+  }
+
+  .contact-map iframe {
+    min-height: 350px;
+  }
+}

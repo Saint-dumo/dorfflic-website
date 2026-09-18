@@ -215,3 +215,101 @@
   transform: translateY(-2px);
   opacity: 0.9;
 }
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+  .about {
+    padding: 80px 5%;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-image {
+    height: 450px;
+  }
+
+  .about-stats {
+    left: 20px;
+    right: 20px;
+  }
+
+  .about-services {
+    margin-top: 100px;
+  }
+
+  .about-service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .security-service {
+    padding: 45px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+  .about {
+    padding: 70px 20px;
+  }
+
+  .about-content {
+    gap: 70px;
+  }
+
+  .about-image {
+    height: 350px;
+  }
+
+  .about-visual {
+    padding-bottom: 50px;
+  }
+
+  .about-stats {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+
+    grid-template-columns: repeat(3, 1fr);
+    padding: 18px 10px;
+  }
+
+  .about-stat strong {
+    font-size: 1.2rem;
+  }
+
+  .about-stat span {
+    font-size: 0.75rem;
+  }
+
+  .about-services {
+    margin-top: 80px;
+  }
+
+  .about-service-card {
+    padding: 30px 25px;
+  }
+
+  .security-service {
+    padding: 35px 25px;
+    gap: 25px;
+  }
+
+  .security-service a {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

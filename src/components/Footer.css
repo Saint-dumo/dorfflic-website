@@ -1,0 +1,157 @@
+.footer {
+  padding: 80px 8% 30px;
+  background: #081827;
+  color: #ffffff;
+}
+
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr;
+  gap: 70px;
+  padding-bottom: 60px;
+}
+
+.footer-brand img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  max-width: 320px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin: 0 0 22px;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.footer-links a,
+.footer-contact a {
+  margin-bottom: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+.footer-contact p {
+  margin: 5px 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  color: inherit;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.footer-socials svg {
+  width: 19px;
+  height: 19px;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-3px);
+  background: var(--accent);
+}
+@media (max-width: 1024px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand p {
+    max-width: 500px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 65px 20px 25px;
+  }
+
+  .footer-main {
+    gap: 35px;
+    padding-bottom: 45px;
+  }
+
+  .footer-brand img {
+    width: 140px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-links,
+  .footer-contact {
+    gap: 0;
+  }
+
+  .footer-links h4,
+  .footer-contact h4 {
+    margin-bottom: 18px;
+  }
+
+  .footer-bottom {
+    gap: 8px;
+  }
+
+  .footer-bottom p {
+    line-height: 1.5;
+  }
+}

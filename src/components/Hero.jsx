@@ -1,6 +1,6 @@
 import "./Hero.css";
-import heroLand from "../assets/dorfflic-hero.png";
-import heroMarine from "../assets/dorfflic-marinehero.png";
+import heroLand from "..dorfflic-hero.png";
+import heroMarine from "..dorfflic-marinehero.png";
 import { useState, useEffect } from "react";
 
 
@@ -19,7 +19,7 @@ function Hero() {
   return (
   <>
     <section className="hero" >
-      <div className={`hero-background hero-background-one $ {currentImage === 0 ? "active" : ""}`}
+      <div className={`hero-background hero-background-one ${currentImage === 0 ? "active" : ""}`}
         style={{ backgroundImage: `url(${heroLand})` }}
       ></div>
 
@@ -31,7 +31,7 @@ function Hero() {
         <h1>Moving What Matters</h1>
         <p>Reliable Marine, & Land Logistics for businesses and individuals.</p>
         <div className="hero-buttons">
-            <a href="#tracking" className="btn-primary">Track Delivery</a>
+            <a href="#track" className="btn-primary">Track Delivery</a>
             <a href="#contact" className="btn-secondary">Get a Quote</a>
         </div>
       </div>
