@@ -1,7 +1,7 @@
 import "./Services.css"
-import marineImage from "..dorfflic-barge.png";
-import landImage from "..dorfflic-bike.png";
-import securityImage from "..dorfflic-boat.png";
+import marineImage from "../assets/dorfflic-barge.png";
+import landImage from "../assets/dorfflic-bike.png";
+import securityImage from "../assets/dorfflic-boat.png";
 
 function Services() {
   return (

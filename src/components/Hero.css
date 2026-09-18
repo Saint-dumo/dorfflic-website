@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  background-image: url("..dorfflic-hero.png");
+  background-image: url("../assets/dorfflic-hero.png");
   background-size: cover;
   background-position: center;
   min-height: 80vh;

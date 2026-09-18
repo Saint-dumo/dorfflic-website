@@ -1,6 +1,6 @@
 import "./Hero.css";
-import heroLand from "..dorfflic-hero.png";
-import heroMarine from "..dorfflic-marinehero.png";
+import heroLand from "../assets/dorfflic-hero.png";
+import heroMarine from "../assets/dorfflic-marinehero.png";
 import { useState, useEffect } from "react";
 
 

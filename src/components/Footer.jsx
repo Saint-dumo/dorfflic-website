@@ -1,4 +1,4 @@
-import logo from "..dorfflic-logo2.png";
+import logo from "../assets/dorfflic-logo2.png";
 import "./Footer.css"
 
 function Footer() {

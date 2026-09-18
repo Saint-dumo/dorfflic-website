@@ -1,4 +1,4 @@
-import marineImage from "..dorfflic-barge.png";
+import marineImage from "../assets/dorfflic-barge.png";
 import "./About.css";
 
 function About() {
